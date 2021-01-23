@@ -34,27 +34,29 @@ Instructions of Installation
 - gif api
 - emotes api
 
-*API #      *API Base URL	                        *Paraments	    *What is it?	    *Successful Response? 
-1           https://developer.nytimes.com/apis		                News info	
-2				
-3				
+| API # | API Base URL | Paraments | What is it? | Successful Response? |
+| ----- | ------------ | --------- | ----------- | -------------------- |
+| 1 | https://developer.nytimes.com/apis | ... | News info | ... |	
+| 2	| ... | ... | ... | ... |			
+| 3	| ... | ... | ... | ... |			
 
 ### Libraries to be Used:
 
-*Library #  *Doc Link   *What does it do?   *How to use it? 
-1			
-2			
-3			
+| Library # | Doc Link | What does it do? | How to use it? |
+| --------- | -------- | ---------------- | -------------- |
+| 1	| ... | ... | ... |		
+| 2 | ... | ... | ... |				
+| 3 | ... | ... | ... |			
 
 ### Packages Required:
 
 - unique id package (nanoid)
 
-
-*Package #      *Package Link	                        *What does it do? 	    *How to use it? 
-1	            https://www.npmjs.com/package/nanoid	Generates a unique id   Use it to identify and distinguish between different models
-2			
-3			
+| Package # | Package Link | What does it do? | How to use it? |
+| --------- | ------------ | ---------------- | -------------- |
+| 1	| https://www.npmjs.com/package/nanoid | Generates a unique id | Use it to identify and distinguish between different models |
+| 2	| ... | ... | ... |	
+| 3	| ... | ... | ... |		
 
 
 
