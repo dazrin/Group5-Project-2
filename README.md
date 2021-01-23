@@ -51,6 +51,7 @@ Instructions of Installation
 - unique id package (nanoid)
 
 | Package # | Package Link | What does it do? | How to use it? |
+| --------- | ------------ | ---------------- | -------------- |
 | 1	| https://www.npmjs.com/package/nanoid | Generates a unique id | Use it to identify and distinguish between different models |
 | 2	| ... | ... | ... |	
 | 3	| ... | ... | ... |		
