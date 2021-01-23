@@ -3,15 +3,15 @@
 ## Table of contents
 
 [Description](#Description)
-Motivation
-Visuals
-Installation Requierments
-Usage
-Future Development
-Authors and acknowledgment
-License
-Badges
-Project Status
+[Motivation](#Motivation)
+[Visuals](#Visuals)
+[Installation_Requierments](#Installation_Requierments)
+[Usage](#Usage)
+[Future_Development](#Future_Development)
+[Authors&Acknowledgment](#Authors&Acknowledgment)
+[License](#License)
+[Badges](#Badges)
+[Project_Status](#Project_Status)
 
 ## Description
 
@@ -25,7 +25,7 @@ Social media sites are too bloated with features, users, and innaccurate informa
 
 UNDER CONSTRUCTION - We will include screenshots or even a video. (ttygif can help, or Asciinema)
 
-## Installation Requierments
+## Installation_Requierments
 
 Instructions of Installation
 
@@ -62,11 +62,11 @@ Instructions of Installation
 
 Show the expected output
 
-## Future Development
+## Future_Development
 
 Future Releases, or what furure Ideas do we have for future development?
 
-## Authors and acknowledgment
+## Authors&Acknowledgment
 
 Matthew Mckerroll
 Niv Suroghon
@@ -82,6 +82,6 @@ MIT
 
 Badges
 
-## Project status
+## Project_Status
 
 development status
