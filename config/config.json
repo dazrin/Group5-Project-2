@@ -1,11 +1,12 @@
+require('dotenv').config();
 {
   "development": {
     "username": "root",
-    "password": null,
+    "password": "kingDDom.",
     "database": "redditlite_db",
     "host": "127.0.0.1",
     "dialect": "postgres",
-    "use_env_variable": "DEV_DATABASE_URL",
+    "use_env_variable": "http://localhost:8080/api"
   },
   "test": {
     "username": "root",
@@ -23,4 +24,4 @@
     "dialect": "postgres",
     "use_env_variable": "DATABASE_URL"
   }
-};
+}

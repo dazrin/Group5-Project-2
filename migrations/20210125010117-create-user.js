@@ -23,9 +23,6 @@ module.exports = {
       sessionID: {
         type: Sequelize.STRING
       },
-      id: {
-        type: Sequelize.INTEGER
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
