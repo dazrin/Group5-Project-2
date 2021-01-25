@@ -2,7 +2,7 @@
 const Sequelize = require('sequelize');
 
 // Creates mySQL connection using Sequelize, the empty string in the third argument spot is our password.
-const sequelize = new Sequelize('redditlitedb', 'root', '', {
+const sequelize = new Sequelize('redditlitedb', 'root', 'password', {
   host: 'localhost',
   port: 8080,
   dialect: 'mysql',
