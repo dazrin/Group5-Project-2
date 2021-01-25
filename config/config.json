@@ -2,22 +2,25 @@
   "development": {
     "username": "root",
     "password": null,
-    "database": "redditlitedb",
+    "database": "redditlite_db",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres",
+    "use_env_variable": "DEV_DATABASE_URL",
   },
   "test": {
     "username": "root",
     "password": null,
-    "database": "database_test",
+    "database": "redditlite_db",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres",
+    "use_env_variable": "TEST_DATABASE_URL"
   },
   "production": {
     "username": "root",
     "password": null,
-    "database": "database_production",
+    "database": "redditlite_db",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres",
+    "use_env_variable": "DATABASE_URL"
   }
-}
+};
