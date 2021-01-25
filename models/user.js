@@ -85,7 +85,7 @@ module.exports = (sequelize, DataTypes) => {
 */
 /* 
 
-// ~ Matthew's code snippet:
+// ~ Matthew's code snippet
 
 module.exports =  (sequelize, DataTypes) => {
     const User = sequelize.define('User',{
