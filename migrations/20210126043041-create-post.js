@@ -14,14 +14,20 @@ module.exports = {
       content: {
         type: Sequelize.TEXT
       },
-      upscore: {
+      upScore: {
         type: Sequelize.INTEGER
       },
       category: {
         type: Sequelize.STRING
       },
       userId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: {
+            tableName: 'Users',
+          },
+          key: 'id',
+        },
       },
       createdAt: {
         allowNull: false,
