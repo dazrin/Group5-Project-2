@@ -3,8 +3,8 @@ require('dotenv').config();
 // Update this file with your mysql database password
 module.exports = {
   "development": {
-    "username": "root",
-    "password": "kingDDom.",
+    "username": "niv",
+    "password": "suroghon",
     "database": "redditlite_db",
     "host": "localhost",
     "dialect": "mysql",
