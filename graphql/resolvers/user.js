@@ -2,7 +2,7 @@
 const jwt = require('jsonwebtoken');                              // json web token to create session id
 const bcrypt = require('bcryptjs');                               // used to compare password input to hashed password
 const { AuthenticationError } = require('apollo-server-express'); // deconstruct Auth error object to throw auth error if password field doesn't match when attempting to log in
-const { User } = require('../models');                            // getting + decontructing User model 
+const { User } = require('../../database/models');                            // getting + decontructing User model 
 
 // Creating register and login resolvers for the mutations in User Schema
 module.exports = {
