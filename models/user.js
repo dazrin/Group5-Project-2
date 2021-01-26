@@ -13,7 +13,6 @@ module.exports = (sequelize, DataTypes) => {
       email: DataTypes.STRING,
       password: DataTypes.STRING,
       score: DataTypes.INTEGER,
-      sessionId: DataTypes.STRING
     },
 
     // defaultScope; Ensures password is not returned as part of query response

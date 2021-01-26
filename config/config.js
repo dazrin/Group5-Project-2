@@ -1,5 +1,6 @@
 require('dotenv').config();
 
+// Update this file with your mysql database password
 module.exports = {
   "development": {
     "username": "root",
