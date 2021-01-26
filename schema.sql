@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS redditlitedb;
+DROP DATABASE IF EXISTS redditlite_db;
 
-CREATE DATABASE redditlitedb;
+CREATE DATABASE redditlite_db;
