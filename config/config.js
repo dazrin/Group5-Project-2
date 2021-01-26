@@ -2,8 +2,8 @@ require('dotenv').config();
 
 module.exports = {
   "development": {
-    "username": "root",
-    "password": "kingDDom.",
+    "username": "niv",
+    "password": "suroghon",
     "database": "redditlite_db",
     "host": "localhost",
     "dialect": "mysql",
