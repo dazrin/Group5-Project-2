@@ -2,8 +2,8 @@
 const jwt = require('jsonwebtoken'); // json web token to create session id
 const bcrypt = require('bcryptjs');  // used to compare password input to hashed password
 
-const { UserInputError } = require('apollo-server-express'); // deconstruct Auth error object to throw auth error if password field doesn't match when attempting to log in
-const { User } = require('../../database/models'); // getting + decontructing User model 
+const { UserInputError, AuthenticationError } = require('apollo-server-express'); // deconstruct Auth error object to throw auth error if password field doesn't match when attempting to log in
+const { User } = require('../../models'); // getting + decontructing User model 
 const { validateRegisterInput, validateLoginInput } = require('../../util/validators'); // Import validation methods
 const { SECRET_KEY } = require('../../secret'); // Sensitive data 
 
@@ -15,7 +15,7 @@ generateToken = (user) => {
       {
           id: user.id,
           email: user.email,
-          name: user.name
+          username: user.username
       },
       SECRET_KEY,
       { expiresIn: '1h' }
@@ -30,8 +30,13 @@ module.exports = {
 
       // Asynchronous function that extracts contents of User model and passes the data as a parameter for the database mutation
       // Essentially gets user info and adds a new user with the info provided
-    async register(_, { name, email, password, confirmPassword },) {
+    async register(_, args, context) {
 
+      const { username, password, email } = args.input;
+      // Validate User Data
+
+      return User.create({ username, password, email });
+      /*
       // Validate User Data
       const { valid, errors } = validateRegisterInput(name, email, password, confirmPassword);
       if (!valid) {
@@ -66,7 +71,7 @@ module.exports = {
         ...res._doc,
         id: res._id,
         token
-      };
+      };*/
     },
 
     // Asynchronous function that takes in an email and password as an input parameter;
@@ -74,9 +79,18 @@ module.exports = {
     // if the user and password match, create a new jsonwebtoken and assign it to the id of the user
     // return the user and the generated session token
     // if the user and password don't match, throw a new auth error stating "Invalid credentials"
-    // TODO: validate inputs + store JWT secret in .env
-    async login(_, { name, password }) {
+  
+    async login(_, { input }, context) {
+      const { username, password } = input;
+      const user = await User.findOne({ where: { username } });
+      const match = await user && bcrypt.compare(password, user.password);
+      if (match) {
+        const token = generateToken(user);
+        return { ...user.toJSON(), token };
+      }
+      throw new AuthenticationError('Invalid Credentials');
 
+      /*
       // Validate login data
       const { errors, valid } = validateLoginInput(name, password);
 

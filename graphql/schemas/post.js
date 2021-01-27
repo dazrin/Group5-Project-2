@@ -9,29 +9,36 @@ module.exports = gql`
  type Post {
      id: Int!
      title: String!
-     content: String!
-     upScore: Int!
+     body: String!
+     votes: Int!
+     voteUp: [Vote]!
      category: String!
      author: User!
      comments: [Comment!]
-     createdAt: String
+     commentCount: Int!
+     createdAt: String!
+ }
 
+ type Vote {
+     id: ID!
+     createdAt: String!
+     username: String!
  }
 
 extend type Query {
-    getAllPosts: [Post!]
-    getSinglePost(postId: Int!): Post
+    getPosts: [Post!]
+    getPost(postId: Int!): Post
 }
 
  extend type Mutation {
-     createPost(title: String!, content: String!): CreatePostResponse
+     createPost(title: String!, body: String!, category: String!): CreatePostResponse
  }
 
  type CreatePostResponse {
     id: Int!
     title: String!
-    content: String!
+    body: String!
+    category: String!
     createdAt: String!
  }
-
 `;

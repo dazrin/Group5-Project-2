@@ -1,4 +1,4 @@
-const { Post } = require('../../database/models');
+const { Post } = require('../../models');
 
 const { AuthenticationError, ApolloError } = require('apollo-server-express');
 
