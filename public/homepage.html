@@ -16,7 +16,7 @@
 
 <body>
 <!-- Header -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="homepage.html">Redditlite</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,12 +29,12 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Link</a>
-              </li>
+              </li>       
             </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit"><a href="login.html">Log In</a></button>
-              <button class="btn btn-outline-success" type="submit"><a href="signup.html">Sign Up</a></button>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control border-none" type="search" placeholder="Search" aria-label="Search">
+              <a href="login.html" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Log In</a>
+              <a href="signup.html" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Sign Up</a>
             </form>
           </div>
         </div>
@@ -165,7 +165,7 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/login.js"></script>
+  <script type="text/javascript" src="../config/config.js"></script>
 
 </body>
 

@@ -27,3 +27,9 @@ module.exports = {
   // "use_env_variable": "DATABASE_URL"
   }
 }
+
+//NY TIMES API
+var config = {
+  MY_API_TOKEN : 'uo8kDH7ynagM6B20qSWeGTocjSemJi7k',
+  SECRET_API_KEY : '0qliqc4S5ThIYk3M',
+};
