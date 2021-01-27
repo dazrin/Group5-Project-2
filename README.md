@@ -2,16 +2,16 @@
 
 ## Table of contents
 
-*[Description](#Description)
-*[Motivation](#Motivation)
-[Visuals](#Visuals)
-[Installation_Requierments](#Installation_Requierments)
-[Usage](#Usage)
-[Future_Development](#Future_Development)
-[Authors&Acknowledgment](#Authors&Acknowledgment)
-[License](#License)
-[Badges](#Badges)
-[Project_Status](#Project_Status)
+* [Description](#Description)
+* [Motivation](#Motivation)
+* [Visuals](#Visuals)
+* [Installation_Requierments](#Installation_Requierments)
+* [Usage](#Usage)
+* [Future_Development](#Future_Development)
+* [Authors&Acknowledgment](#Authors&Acknowledgment)
+* [License](#License)
+* [Badges](#Badges)
+* [Project_Status](#Project_Status)
 
 ## Description
 
