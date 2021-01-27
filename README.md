@@ -2,8 +2,8 @@
 
 ## Table of contents
 
-[Description](#Description)
-[Motivation](#Motivation)
+*[Description](#Description)
+*[Motivation](#Motivation)
 [Visuals](#Visuals)
 [Installation_Requierments](#Installation_Requierments)
 [Usage](#Usage)
