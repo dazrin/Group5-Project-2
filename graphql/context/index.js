@@ -1,4 +1,4 @@
-// Dependencies
+/* Dependencies
 const { User } = require('../../database/models');                        // getting + deconstructing User model
 const jwt = require('jsonwebtoken');                               // use json web token to assign a session id
 const { AuthenticationError } = require('apollo-server-express')   // auth error object used to throw auth errors when password doesn't match
@@ -32,3 +32,4 @@ module.exports = async ({ req }) => {
    const user = await verifyToken(token)
   return { user };
 };
+*/
