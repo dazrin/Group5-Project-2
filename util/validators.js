@@ -12,22 +12,22 @@ module.exports.validateRegisterInput = (
     const errors = {};
 
     // If username is empty, return an error called 'username' that specifies that the field cannot be empty
-    if (name.trim() === ''){
+    if (name === ''){
         errors.username = 'Name must not be empty';
     }
 
     // If email is empty, return an error called 'email' that specifies that the field cannot be empty
-    if (email.trim() === ''){
+    if (email === ''){
         errors.email = 'Email must not be empty';
   } else {
 
     // Regular expression to ensure that an email type format is used
-    const regEx = /^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$/;
+    // const regEx = /^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$/;
 
     // If the email field doesn't match the format defined by the regular expression, return an error called 'email' that specifies the field must be a valid email address
-    if(!email.match(regEx)){
+    /*if(!email.match(regEx)){
         errors.email = 'Email must be a valid email address';
-    }
+    }*/
   }
 
     // If password is empty, return an error that specifies that the password field cannot be empty
@@ -54,12 +54,12 @@ module.exports.validateLoginInput = (name, password) => {
     const errors = {};
 
     // Validation to ensure that someone cannot attempt to log in with a blank username
-    if(name.trim() === ''){
+    if(name === ''){
         errors.name = 'Name must not be empty';
     }
 
     // Validation to ensure that someone cannot attempt to log in with a blank password
-    if(password.trim() === ''){
+    if(password === ''){
         errors.password = 'Password must not be empty';
     }
 
