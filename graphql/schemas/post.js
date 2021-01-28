@@ -31,14 +31,14 @@ extend type Query {
 }
 
  extend type Mutation {
-     createPost(title: String!, body: String!, category: String!): CreatePostResponse
+     createPost(title: String!, body: String!): CreatePostResponse
  }
 
  type CreatePostResponse {
     id: Int!
     title: String!
     body: String!
-    category: String!
     createdAt: String!
  }
 `;
+// note: removed category as an input field and therefore removed it as a response 

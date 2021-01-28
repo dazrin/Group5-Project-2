@@ -1,8 +1,9 @@
+/*
 // Contains code to validate information such as login data
 
 module.exports.validateRegisterInput = (
     // data to be validated:
-    name, 
+    username, 
     email,
     password,
     confirmPassword
@@ -12,7 +13,7 @@ module.exports.validateRegisterInput = (
     const errors = {};
 
     // If username is empty, return an error called 'username' that specifies that the field cannot be empty
-    if (name === ''){
+    if (username === ''){
         errors.username = 'Name must not be empty';
     }
 
@@ -27,7 +28,7 @@ module.exports.validateRegisterInput = (
     // If the email field doesn't match the format defined by the regular expression, return an error called 'email' that specifies the field must be a valid email address
     /*if(!email.match(regEx)){
         errors.email = 'Email must be a valid email address';
-    }*/
+    }
   }
 
     // If password is empty, return an error that specifies that the password field cannot be empty
@@ -48,13 +49,13 @@ module.exports.validateRegisterInput = (
 
 
 // Function to validate login data
-module.exports.validateLoginInput = (name, password) => {
+module.exports.validateLoginInput = (username, password) => {
 
     // Empty object for errors
     const errors = {};
 
     // Validation to ensure that someone cannot attempt to log in with a blank username
-    if(name === ''){
+    if(username === ''){
         errors.name = 'Name must not be empty';
     }
 
@@ -69,3 +70,4 @@ module.exports.validateLoginInput = (name, password) => {
         valid: Object.keys(errors).length < 1
     };
 };
+*/
