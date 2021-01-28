@@ -14,6 +14,7 @@ let getStories = fetch('https:api.nytimes.com/svc/topstories/v2/home.json?api-ke
         console.log(timesApi[i]);
 
         const post =`
+                <a href="blogpost.html">
                     <div class="row">
                         <div class="col-md-3">
                             <img alt="" class="img-fluid rounded-circle" src="${timesApi[i].multimedia[0].url}">
@@ -24,13 +25,14 @@ let getStories = fetch('https:api.nytimes.com/svc/topstories/v2/home.json?api-ke
                             <h4 id="trendingTitle">${timesApi[i].title}</h4>
                             <p id="trendingAuthor">${timesApi[i].byline}</p>
                         </div>
-                    </div>`
+                    </div>
+                </a>`
+                
             document.querySelector("#target").innerHTML += post 
+
+        $("#target").click(function(){
+            window.location = $(this).find("a").attr("href");
+            return false;
+        })
     }});
-
-
-// Step 1: Get generate 10 random #s from 0-53 (top trending stories)
-// Step 2: Perform step one only every 24 hours
-// Step 3: Of the 10 numbers chosen get data needed for front page
-// Ex:
 
