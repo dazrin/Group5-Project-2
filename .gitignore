@@ -105,3 +105,6 @@ dist
 
 #passwords
 .env
+
+# API key
+config.js
