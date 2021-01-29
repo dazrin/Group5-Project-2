@@ -9,7 +9,7 @@ module.exports = gql`
 
  type User {
      id: Int!
-     name: String!
+     username: String!
      email: String!
      password: String!
      score: Int!
@@ -23,24 +23,24 @@ module.exports = gql`
 
  type RegisterResponse {
     id: Int!
-    name: String!
+    username: String!
     email: String!
  }
 
  input RegisterInput {
-     name: String!
+     username: String!
      email: String!
      password: String!
  }
 
 input LoginInput {
-     email: String!
+     username: String!
      password: String!
  }
 
   type LoginResponse {
     id: Int!
-    name: String!
+    username: String!
     email: String!
     token: String!
  }

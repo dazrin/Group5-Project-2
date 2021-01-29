@@ -3,9 +3,9 @@ require('dotenv').config();
 // Update this file with your mysql database password
 module.exports = {
   "development": {
-    "username": "niv",
-    "password": "suroghon",
-    "database": "redditlite_db",
+    "username": "root",
+    "password": "kingDDom.",
+    "database": "redditlitedb",
     "host": "localhost",
     "dialect": "mysql",
     // "use_env_variable": "DEV_DATABASE_URL"
@@ -13,7 +13,7 @@ module.exports = {
   "test": {
     "username": "root",
     "password": null,
-    "database": "redditlite_db",
+    "database": "redditlitedb",
     "host": "localhost",
     "dialect": "mysql",
    // "use_env_variable": "TEST_DATABASE_URL"
@@ -21,7 +21,7 @@ module.exports = {
   "production": {
     "username": "root",
     "password": null,
-    "database": "redditlite_db",
+    "database": "redditlitedb",
     "host": "localhost",
     "dialect": "mysql",
   // "use_env_variable": "DATABASE_URL"

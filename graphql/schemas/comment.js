@@ -8,20 +8,20 @@ module.exports = gql`
 
  type Comment {
      id: Int!
-     content: String!
+     body: String!
      author: User!
      post: Post!
-     createdAt: String
+     createdAt: String!
 
  }
 
  extend type Mutation {
-     createComment(content: String!, postId: Int!): CreateCommentResponse
+     createComment(body: String!, postId: Int!): CreateCommentResponse
  }
 
  type CreateCommentResponse {
     id: Int!
-    content: String!
+    body: String!
     createdAt: String!
  }
 

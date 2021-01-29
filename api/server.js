@@ -13,20 +13,6 @@ const app = express();
 // use cors as middleware for express
 app.use(cors());
 
-/*
-// Type Definitions for GraphQL
-const typeDefs = gql`
-    type Query {
-        sayHi: String!
-    }
-`
-// resolver 
-    const resolvers = {
-        Query: {
-            sayHi: () => "Hello World!"
-        }
-    }
-*/
 // setting up instance of apollo to use for our graphql playground
 const apolloServer = new ApolloServer({
     typeDefs,
