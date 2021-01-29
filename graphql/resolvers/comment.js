@@ -5,7 +5,7 @@ const { AuthenticationError, ApolloError } = require('apollo-server-express');
 module.exports = {
   Mutation: {
       // Ensures that only users who are logged in can create a comment
-    async createComment(_, {  body, postId }, { user = null }) {
+    async createComment(_, { body, postId }, { user = null }) {
       if (!user) {
         throw new AuthenticationError('You must login to create a comment');
       }
