@@ -11,28 +11,21 @@ let getStories = fetch('https:api.nytimes.com/svc/topstories/v2/home.json?api-ke
     
         // console.log(document.querySelector("#target"))
         for (let i = 0; i < 10; i++) {
-        console.log(timesApi[i]);
+
+//for every top story we create a new CLICKABLE div in "trending today"
+// that will hold an individual ny times article
 
         const post =`
-                <a href="blogpost.html">
                     <div class="row">
                         <div class="col-md-3">
                             <img alt="" class="img-fluid rounded-circle" src="${timesApi[i].multimedia[0].url}">
                         </div>
-                    </div>
-
-                    <div class="col-md-9">
-                            <h4 id="trendingTitle">${timesApi[i].title}</h4>
+                        <div class="col-md-9">
+                            <a href="${timesApi[i].url}" target="_blank"><h4 id="trendingTitle">${timesApi[i].title}</h4></a>
                             <p id="trendingAuthor">${timesApi[i].byline}</p>
                         </div>
-                    </div>
-                </a>`
-                
-            document.querySelector("#target").innerHTML += post 
+                    </div>`
 
-        $("#target").click(function(){
-            window.location = $(this).find("a").attr("href");
-            return false;
-        })
+        document.querySelector("#target").innerHTML += post 
     }});
 
