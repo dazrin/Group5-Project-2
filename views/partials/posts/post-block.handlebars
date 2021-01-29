@@ -1,4 +1,35 @@
-<ul>
+<article class="blog-post mb-3">
+    <div class="row">
+        <div class="col-sm-3">
+             <p class="score">{{upscore}}</p><button class="upvote btn btn-primary" data-id="{{id}}">+1</button>
+        </div>
+        <div class="col-sm-9">
+            <h3><a href="{{body}}">{{title}}</a></h3>
+            <div class="badge">
+                <a class="commentsLink" data-id="{{id}}" href="../../../public/comments.html">Comments</a>
+                <p>Submitted by: {{author}}</p>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+{{!-- 
+object stuff needed:   
+
+post.upscore
+post.body
+post.title
+post.id
+post.author
+
+ --}}
+
+
+{{! old code below}}
+
+{{!-- <ul>
     {{!--this probably doesnt work  some one better at handlebars should probably look at this--}}
-    <button class="upvote" data-id="{{id}}">+1</button> <a href="{{link}}">{{headline}}</a> <p>submitted by:{{username}}</p>
-</ul>
+    <button class="upvote" data-id="{{id}}">+1</button> <a href="{{link}}">{{headline}}</a> <p>submitted by:{{username}}</p> <a href="comments/{{id}}">comments</a>
+</ul> --}}

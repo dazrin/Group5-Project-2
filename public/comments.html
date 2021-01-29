@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>User Comments Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link href="/public/stylesheets/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Redditlite</a>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <!-- need to specify link to main page somehow, not sure what the route should be. i have left it as "/" for now -->
+              <a class="nav-link" href="/">Home</a>  
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+        </ul>
+      
+        
+      </nav>
+     
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+       
+        <form class="comment">
+          <div class="form-group">
+              <!-- insert post title below and link it.-->
+              <div id="postTitle"></div>
+            <label for="commenttext">Tell us how you <em>really</em> feel:</label>
+            <input type="text" class="form-control" id="commenttext" placeholder="tell us your thoughts here">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        <br />
+      </div>
+    </div>
+  </div>
+<div class="container">
+    <div id="commentSection">
+        <!-- comments get inserted here -->
+    </div> 
+
+</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/login.js"></script>
+
+</body>
+
+</html>

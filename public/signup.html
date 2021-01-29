@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Login Page</title>
+  <title>Sign Up Page</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
@@ -19,26 +19,30 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
-        <h2>Login Form</h2>
-        <form class="login">
+        <h2>Register Form</h2>
+        <form class="signup">
           <div class="form-group">
-            <label for="emailInput">Email address</label>
-            <input type="email" class="form-control" id="emailInput" placeholder="Email">
+            <label for="exampleInputEmail1">Username</label>
+            <input type="text" class="form-control" id="emailInput" placeholder="Email">
           </div>
           <div class="form-group">
-            <label for="passwordInput">Password</label>
+            <label for="exampleInputPassword1">Password</label>
             <input type="password" class="form-control" id="passwordInput" placeholder="Password">
           </div>
-          <button type="submit" class="btn btn-default">Login</button>
+          <div class="form-group">
+            <label for="confirmpasswordInput">Confirm Password</label>
+            <input type="password" class="form-control" id="confirmpasswordInput" placeholder=" Confirm Password">
+          </div>
+          <button type="submit" class="btn btn-default">Sign Up</button>
         </form>
         <br />
-        <p>Or sign up <a href="signup.html">here</a></p>
+        <p>Already have an account? <a href="./login.html">here</a></p>
       </div>
     </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/login.js"></script>
+  <script type="text/javascript" src="js/signup.js"></script>
 
 </body>
 
