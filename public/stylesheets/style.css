@@ -1,5 +1,6 @@
 /* this is some style */
 
+/* Font  & bg color*/
 body {
     font-family: 'Montserrat', sans-serif;
 };
@@ -9,6 +10,7 @@ h2
 h3
 h4
 h5 {
+    font-family: 'Montserrat', sans-serif ;
     font-weight: 700;
 };
 
@@ -21,3 +23,10 @@ h5 {
 .hero {
     background-color: grey;
 }
+.hero.py-4 {
+    background-color: lightslategrey;
+};
+
+.container {
+    background-color: lightslategrey;
+};
