@@ -2,7 +2,9 @@
 const nanoid = require('nanoid'); // generates a random id
 const bcrypt = require('bcryptjs'); // hashes password 
 
+// Importing sequelize + datatypes from Sequelize object
 module.exports = (sequelize, DataTypes) => {
+
   // Define User table in sequelize
   const User = sequelize.define(
 
@@ -31,7 +33,7 @@ module.exports = (sequelize, DataTypes) => {
     user.password = await user.generatePasswordHash();
   });
   // Function to hash user's password
-  User.prototype.generatePasswordHash = () => {
+  User.prototype.generatePasswordHash = function () {
 
     // Pass in user's password
     if (this.password) {

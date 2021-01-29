@@ -5,7 +5,7 @@ const { AuthenticationError } = require('apollo-server-express');
 
 module.exports = {
 
-    // resolver function to handle createPost mutation
+    // Resolver function to handle mutations and queries related to Post model
   Mutation: {
     async createPost(_, { title, body, }, { user = null }) {
       if (!user) {
@@ -16,6 +16,30 @@ module.exports = {
         title,
         body,
       });
+    },
+  },
+
+  // Get all posts in the database
+  Query: {
+    async getPosts(root, args, context) {
+      return Post.findAll();
+    },
+
+    // Get single post in the database
+    // - finds a particular post using the postId
+    async getPost(_, { postId }, context) {
+      return Post.findByPk(postId);
+    },
+  },
+
+  // Returns the author of a post
+  Post: {
+    author(post) {
+      return post.getAuthor();
+    },
+
+    comments(post) {
+      return post.getComments();
     },
   },
 };

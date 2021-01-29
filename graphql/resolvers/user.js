@@ -48,8 +48,8 @@ module.exports = {
 
       const { username, password } = input;
       const user = await User.findOne({ where: { username } });
-      //if (user && bcrypt.compareSync(password, user.password)) {
-        if (user && password) {
+      if (user && bcrypt.compareSync(password, user.password)) {
+        //if (user && password) {
         //const token = generateToken(user);
         const token = jwt.sign({ id: user.id }, 'mySecret');
         return { ...user.toJSON(), token };

@@ -21,7 +21,7 @@ module.exports = gql`
 
  type CreateCommentResponse {
     id: Int!
-    content: String!
+    body: String!
     createdAt: String!
  }
 
