@@ -32,6 +32,7 @@ extend type Query {
 
  extend type Mutation {
      createPost(title: String!, body: String!): CreatePostResponse
+     deletePost(postId: Int!): String!
  }
 
  type CreatePostResponse {
@@ -42,3 +43,4 @@ extend type Query {
  }
 `;
 // note: removed category as an input field and therefore removed it as a response 1611892769668 1611892807209
+//      deletePost(postId: Int!): String!
