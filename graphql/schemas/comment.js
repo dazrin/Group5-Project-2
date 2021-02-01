@@ -17,6 +17,7 @@ module.exports = gql`
 
  extend type Mutation {
      createComment(body: String!, postId: Int!): CreateCommentResponse
+     
  }
 
  type CreateCommentResponse {
@@ -26,3 +27,4 @@ module.exports = gql`
  }
 
 `;
+// deleteComment(postId: Int!, commentId: Int!): String!

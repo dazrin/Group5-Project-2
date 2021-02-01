@@ -20,7 +20,30 @@ module.exports = {
       }
       throw new ApolloError('Unable to create a comment');
     },
-  },
+
+   /* async deleteComment(_, { postId, commentId }, { user = null }) {
+      if (!user) {
+        throw new AuthenticationError('You must login to delete your comment');
+      }
+
+      const post = Post.findByPk(postId);
+
+      if(post) {
+          const commentIndex = post.comments.findIndex((comment) => comment.id === commentId); // trying to access comment array id field
+
+
+          if (post.comments[commentIndex].userId === user.userId) {
+              post.comments.splice(commentIndex, 1);
+              post.update(comments, commentId);
+              return post;
+          } else {
+              throw new AuthenticationError("Action not allowed");
+          }
+          } else {
+              throw new UserInputError('Post not found');
+          }
+        }
+  },*/
 
   Comment: {
     author(comment) {
