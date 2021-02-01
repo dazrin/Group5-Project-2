@@ -24,7 +24,7 @@ module.exports = {
     "database": "redditlitedb",
     "host": "localhost",
     "dialect": "mysql",
-  // "use_env_variable": "DATABASE_URL"
+    "use_env_variable": "JAWSDB_URL"
   }
 }
 
