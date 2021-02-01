@@ -1,7 +1,7 @@
-let mykey = config.MY_KEY;
-let secretkey = config.SECRET_KEY;
+// let mykey = process.env.MY_API_TOKEN;
+// let secretkey = process.env.SECRET_KEY;
 
-let getStories = fetch('https:api.nytimes.com/svc/topstories/v2/home.json?api-key=' + mykey,)
+let getStories = fetch('https:api.nytimes.com/svc/topstories/v2/home.json?api-key=' + 'uo8kDH7ynagM6B20qSWeGTocjSemJi7k')
     .then(response => response.json())
     .then(data => {
     

@@ -10,6 +10,21 @@ const context = require('../graphql/context'); // require models from context fo
 // setting up instance of express
 const app = express();
 
+// Serve static content for the app from the "public" directory in the application directory.
+app.use(express.static('public'));
+
+
+// engine handelbars
+const exphbs = require('express-handlebars');
+
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.set('view engine', 'handlebars');
+
+// route to homepage
+app.get('/', (req,res) => {
+    res.render('index');
+})
+
 // use cors as middleware for express
 app.use(cors());
 
