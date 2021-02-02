@@ -1,6 +1,6 @@
 // let mykey = process.env.MY_API_TOKEN;
 // let secretkey = process.env.SECRET_KEY;
-function myApiCall() {
+// function myApiCall() {
     let getStories = fetch('https:api.nytimes.com/svc/topstories/v2/home.json?api-key=' + 'uo8kDH7ynagM6B20qSWeGTocjSemJi7k')
     .then(response => response.json())
     .then(data => {
@@ -25,11 +25,12 @@ function myApiCall() {
                             <p id="trendingAuthor">${timesApi[i].byline}</p>
                         </div>
                     </div>`
+        
+        $('#target').append(post);
+        // document.querySelector("#target").innerHTML += post
+// };
 
-        document.querySelector("#target").innerHTML += post
-};
-
-myApiCall();
+// myApiCall();
 
     // On click we recieve the index of this specific article in our for loop
         $(".target2").click(function() {
@@ -37,7 +38,7 @@ myApiCall();
             // console.log(timesApi[index])
         // sets on click to redirect us to new html that allows the user to add comments to the post
             window.location.href = 'comments.html'
-            const newpost = `
+            const newPost = `
                 <div class="row">
                     <div class="col-lg-12">
                         <h1>${timesApi[index].title}</h1>
@@ -48,6 +49,6 @@ myApiCall();
                     </div>
                 </div>`
         // apiPost lives in comments.html, where we will send the data
-            $("#apiPost").append(newpost);
+            $("#apiPost").append(newPost);
         })
-    })};
+    }});
