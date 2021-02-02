@@ -21,7 +21,7 @@
                             <img alt="" class="img-fluid rounded-circle" src="${timesApi[i].multimedia[0].url}">
                         </div>
                         <div class="col-md-9">
-                            <a class="target2" data-index=${i} href="comments.html" target="_blank"><h4 id="trendingTitle">${timesApi[i].title}</h4></a>
+                            <button class="target2" data-index=${i} href="comments.html"><h4 id="trendingTitle">${timesApi[i].title}</h4></button>
                             <p id="trendingAuthor">${timesApi[i].byline}</p>
                         </div>
                     </div>`
@@ -33,9 +33,8 @@
 // myApiCall();
 
     // On click we recieve the index of this specific article in our for loop
-        $(".target2").click(function() {
+        $(".target2").on("click", function() {
             const index = $(this).data("index");
-            // console.log(timesApi[index])
         // sets on click to redirect us to new html that allows the user to add comments to the post
             window.location.href = 'comments.html'
             const newPost = `
