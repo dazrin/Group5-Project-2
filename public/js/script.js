@@ -28,7 +28,9 @@ function myApiCall() {
 
         document.querySelector("#target").innerHTML += post
 };
-   
+
+myApiCall();
+
     // On click we recieve the index of this specific article in our for loop
         $(".target2").click(function() {
             const index = $(this).data("index");
