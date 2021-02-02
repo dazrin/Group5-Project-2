@@ -21,11 +21,31 @@ let getStories = fetch('https:api.nytimes.com/svc/topstories/v2/home.json?api-ke
                             <img alt="" class="img-fluid rounded-circle" src="${timesApi[i].multimedia[0].url}">
                         </div>
                         <div class="col-md-9">
-                            <a href="${timesApi[i].url}" target="_blank"><h4 id="trendingTitle">${timesApi[i].title}</h4></a>
+                            <a class="target2" data-index=${i} href="comments.html" target="_blank"><h4 id="trendingTitle">${timesApi[i].title}</h4></a>
                             <p id="trendingAuthor">${timesApi[i].byline}</p>
                         </div>
                     </div>`
 
-        document.querySelector("#target").innerHTML += post 
+        document.querySelector("#target").innerHTML += post
+    
+    // On click we recieve the index of this specific article in our for loop
+        $(".target2").click(function() {
+            const index = $(this).data("index");
+            // console.log(timesApi[index])
+        // sets on click to redirect us to new html that allows the user to add comments to the post
+            window.location.href = 'comments.html'
+            const newpost = `
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>${timesApi[index].title}</h1>
+                        <img alt="" class="img-fluid" src="${timesApi[index].multimedia[0].url}"></img>
+                        <p>${timesApi[index].byline}</p>
+                        <p>${timesApi[index].abstract}</p>
+                        <p>Acess Full Article: ${timesApi[index].url}</p>
+                    </div>
+                </div>`
+        // apiPost lives in comments.html, where we will send the data
+            $("#apiPost").append(newpost);
+        })
     }});
 
