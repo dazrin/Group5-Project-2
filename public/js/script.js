@@ -1,7 +1,7 @@
 // let mykey = process.env.MY_API_TOKEN;
 // let secretkey = process.env.SECRET_KEY;
-
-let getStories = fetch('https:api.nytimes.com/svc/topstories/v2/home.json?api-key=' + 'uo8kDH7ynagM6B20qSWeGTocjSemJi7k')
+function myApiCall() {
+    let getStories = fetch('https:api.nytimes.com/svc/topstories/v2/home.json?api-key=' + 'uo8kDH7ynagM6B20qSWeGTocjSemJi7k')
     .then(response => response.json())
     .then(data => {
     
@@ -27,7 +27,8 @@ let getStories = fetch('https:api.nytimes.com/svc/topstories/v2/home.json?api-ke
                     </div>`
 
         document.querySelector("#target").innerHTML += post
-    
+};
+   
     // On click we recieve the index of this specific article in our for loop
         $(".target2").click(function() {
             const index = $(this).data("index");
@@ -47,5 +48,4 @@ let getStories = fetch('https:api.nytimes.com/svc/topstories/v2/home.json?api-ke
         // apiPost lives in comments.html, where we will send the data
             $("#apiPost").append(newpost);
         })
-    }});
-
+    })};
