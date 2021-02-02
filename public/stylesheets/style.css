@@ -30,3 +30,17 @@ h5 {
 .container {
     background-color: lightslategrey;
 };
+
+.score{
+color:darkblue;
+font-weight: bolder;
+font-size: larger;
+}
+
+.submittedBy {
+    color: gray;
+}
+
+.titleText {
+    font-weight: bolder;
+}
