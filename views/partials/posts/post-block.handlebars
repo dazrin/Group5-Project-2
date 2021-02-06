@@ -3,11 +3,11 @@
         <div class="col-sm-3">
              <p class="score">{{upscore}}</p><button class="upvote btn btn-primary" data-id="{{id}}">+1</button>
         </div>
-        <div class="col-sm-9">
-            <h3><a href="{{body}}">{{title}}</a></h3>
+        <div class="col-sm-9 postbody">
+            <h3 class="titletext"><a href="{{body}}">{{title}}</a></h3>
             <div class="badge">
                 <a class="commentsLink" data-id="{{id}}" href="../../../public/comments.html">Comments</a>
-                <p>Submitted by: {{userId}}</p>
+                <p class="submittedBy">Submitted by: {{userId}}</p>
             </div>
         </div>
     </div>
